@@ -4,36 +4,36 @@
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <link rel='icon' href='images/favicon02.png'>
-    <link rel="stylesheet" href="bootstrap-grid.min.css">
+    <link rel='icon' href='images/favicon.png'>
     <link rel="stylesheet" href="style.css">
+
     <title>El Matador</title>
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <img class="navbar-logo mx-5" src="images/logo01.svg">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        <a class="nav-link" href="#">Menu</a>
-                        <a class="nav-link" href="#">Daily Specials</a>
-                        <a class="nav-link" href="#">Reservations</a>
-                        <a class="nav-link" href="#">Order Online</a>
-                        <a class="nav-link" href="#">Contact Us</a>
-                        <a class="nav-link" href="#"><img src="images/facebook02.svg"></a>
-                        <a class="nav-link" href="#"><img src="images/instagram02.svg"></a>
-                    </div>
-                </div>
-            </div>
+        <div class="navbar-left">
+            <div class="navbar-logo"><img src="images/logo01.svg"></div>
+            <input id="nav-check" type="checkbox" hidden>
+        </div>
+        <nav class="navbar-list">
+            <div class="navbar-logo"><img src="images/logo01.svg"></div>
+            <ul>
+                <li><a class="nav-link active" href="#">Home</a></li>
+                <li><a class="nav-link" href="#">Our Menu</a></li>
+                <li><a class="nav-link" href="#">Specials</a></li>
+                <li><a class="nav-link" href="#">Bookings</a></li>
+                <li><a class="nav-link" href="#">Order Here</a></li>
+                <li><a class="nav-link" href="#">Contact Us</a></li>
+                <li><a class="nav-link logo-link" href="#"><img src="images/facebook02.svg"></a></li>
+                <li><a class="nav-link logo-link" href="#"><img src="images/instagram02.svg"></a></li>
+            </ul>
         </nav>
+        <label for="nav-check" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
     </header>
     <section>
         <img class="mainImage" src="images/bonfire01.svg"></a>
@@ -50,7 +50,7 @@
             <br><br>
         </div>
 
-        <div class="container text-center">
+        <div class="container">
             <div class="row">
                 <div class="col">
                     <img class="imageColumn" src="images/image01.jpg">
@@ -84,9 +84,9 @@
 
         <img class="mainImage" src="images/image04.svg">
 
-        <div class="container text-center">
+        <div class="container">
+            <h1 class="ourTeam">OUR TEAM</h1>
             <div class="row">
-                <h1 id="ourTeam">OUR TEAM</h1>
                 <div class="col">
                     <img class="imageColumn" src="images/image05.png">
                     <br> <br>
@@ -125,24 +125,19 @@
     </section>
 
     <footer>
-        <div class="footerChild">
+        <div class="footerChild1">
             <h1>El Matador - Café, Asador Grill & Bar</h1> <br><br>
-            <img class="iconsFooter" src="images/phone.svg">
-            <span>(04) 381 2999</span> <br>
-            <img class="iconsFooter" src="images/mail.svg">
-            <span>eat@elmatador.co.nz</span> <br>
-            <img class="iconsFooter" src="images/location.svg">
-            <span>196 Cuba Street, Te Aro, Wellington 6011</span> <br>
-            <img class="iconsFooter" src="images/clock.svg">
-            <span>Monday - Sunday (17hs - 00hs)</span>
+            <div class="iconText"> <img src="images/phone.svg">(04) 381 2999</div>
+            <div class="iconText"> <img src="images/mail.svg"">eat@elmatador.co.nz</div>
+            <div class="iconText"> <img src="images/location.svg">196 Cuba Street, Te Aro, Wellington 6011</div>
+            <div class="iconText"> <img src="images/clock.svg">Monday - Sunday (17hs - 00hs)</div>
         </div>
-        <div class="footerChild">
+        <div class="footerChild2">
             <img class="logo" src="images/ElMatador.png">
         </div>
 
     </footer>
 
-    <script src="bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 
