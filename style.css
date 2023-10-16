@@ -216,12 +216,15 @@ footer {
     }
 
     header .navbar-list {
+        align-items: center;
+        text-align: center;
+        justify-content: center;
         position: fixed;
         position: absolute;
         left: -800px;
         top: 0;
         z-index: 1000;
-        width: 70vw;
+        width: auto;
         height: 100vh;
         background-color: #e8e8e8;
     }
@@ -232,13 +235,15 @@ footer {
     }
 
     header .navbar-list .navbar-logo img {
-        display: flex !important;
+        display: block !important;
         height: 60px;
-        margin: 2em 1em 0 1em;
+        margin: 2em 1em 0 3em;
     }
 
     header .navbar-list ul .nav-link {
-        margin: 5px !important;
+        margin: 5px 10px !important;
+        padding: 1em !important;
+        width: 150px !important;
     }
 
     header .navbar-list ul .logo-link {
