@@ -11,7 +11,7 @@
 
 body {
     background-color: #151518;
-    overflow: overlay;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -30,7 +30,7 @@ header {
     width: 100svw;
     position: fixed;
 
-    & .navbar-left .navbar-logo img {
+    & .navbar-logo img {
 
         height: 50px;
         margin: 0.2em 0;
@@ -81,20 +81,6 @@ header {
 
     & .hamburger {
         display: none;
-        cursor: pointer;
-        height: fit-content;
-        width: 40px;
-        padding: 3px 2px 3px 8px;
-        align-items: center;
-        text-align: center;
-        border-radius: 10px;
-
-        & div {
-            background-color: #151518;
-            width: 24px;
-            height: 2px;
-            margin: 6px 0;
-        }
 
         &:hover {
             background-color: #D5AE58;
@@ -103,6 +89,8 @@ header {
 }
 
 section {
+    justify-content: center;
+    align-items: center;
 
     .text {
         font-size: 17px;
@@ -110,10 +98,19 @@ section {
         padding: 0 10em;
     }
 
-    .mainImage {
-        padding: 3em 0;
-        width: 100%;
+    .container-mainImage {
+        display: flex;
+        width: 100svw;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        .mainImage {
+            padding: 3em 0;
+            width: 90%;
+        }
     }
+
 
     .container {
         box-shadow: 0 0 30px black;
@@ -206,7 +203,15 @@ footer {
     border-radius: 10px;
 }
 
-@media (width < 600px) {
+@media (width < 860px) {
+
+    header {
+        padding: 0 1em 0 0;
+    }
+
+    header .navbar-logo img {
+        height: 40px;
+    }
 
     header .navbar-list {
         position: fixed;
@@ -238,14 +243,35 @@ footer {
         display: none !important;
     }
 
-    #nav-check:checked~nav {
-        left: 0;
+    header .hamburger {
+        display: flex !important;
+        cursor: pointer;
+        height: fit-content;
+        width: 30px;
+        padding: 4px;
+        align-items: center;
+        text-align: center;
+        border-radius: 10px;
+        flex-direction: column;
+    }
+
+    header .hamburger div {
+        background-color: #151518;
+        width: 20px;
+        height: 2px;
+        margin: 2px 2px;
+    }
+
+    #nav-check:checked~.navbar-list {
+        left: 0 !important;
     }
 
     section {
 
         .mainImage {
             padding: 3em 0;
+            height: 500px;
+            min-width: 200%;
         }
 
         .text {
@@ -255,7 +281,7 @@ footer {
         .container {
             box-shadow: 0 0 30px black;
             border-radius: 20px;
-            padding-bottom: 0;
+            padding: 0 1em;
 
 
             .row {
@@ -281,6 +307,7 @@ footer {
 
             & button {
                 margin-bottom: 1em;
+                font-size: 16px;
             }
         }
     }
