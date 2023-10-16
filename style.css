@@ -12,6 +12,7 @@
 body {
     background-color: #151518;
     overflow-x: hidden;
+    max-width: 100%;
 }
 
 h1 {
