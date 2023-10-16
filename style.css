@@ -9,6 +9,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html,
 body {
     background-color: #151518;
     overflow-x: hidden;
@@ -284,8 +285,10 @@ footer {
             border-radius: 20px;
             padding: 0 1em;
 
-
             .row {
+                justify-content: center;
+                align-items: center;
+                text-align: center;
                 flex-direction: column;
                 gap: 0em;
 
@@ -295,7 +298,8 @@ footer {
                 }
 
                 .col {
-                    padding: 3em;
+
+                    padding: 3em 0;
                     flex: 1;
                     font-size: 16px;
 
